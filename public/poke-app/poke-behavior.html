@@ -1,0 +1,16 @@
+<link rel="import" href="/bower_components/app-storage/app-network-status-behavior.html">
+<script>
+  (() => {
+    'use strict';
+    Polymer.PokeAppBehaviorImpl = {
+      create() {
+        console.log('Create click!');
+        this.$.camera.open();
+      }
+    };
+    Polymer.PokeAppBehavior = [
+      Polymer.AppNetworkStatusBehavior,
+      Polymer.PokeAppBehaviorImpl
+    ];
+  })();
+</script>

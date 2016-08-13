@@ -1,0 +1,41 @@
+<link rel="import" href="/bower_components/paper-styles/color.html">
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
+<dom-module id="poke-camera">
+  <template>
+    <img src="about:blank" alt="" id="showPicture">
+    <input type="file" id="takePicture" accept="image/*" hidden>
+  </template>
+  <script>
+    (() => {
+      Polymer({
+        is: 'poke-camera',
+        properties: {
+        },
+        ready: function() {
+          this.$.takePicture.onchange = (event) => {
+            // Get a reference to the taken picture or chosen file
+            let files = event.target.files, file;
+            if (files && files.length > 0) {
+              file = files[0];
+              try {
+              var imgURL = window.URL.createObjectURL(file);
+              console.log(this.$.showPicture);
+              this.$.showPicture.src = imgURL;
+              console.log(this.$.showPicture.src);
+              //URL.revokeObjectURL(imgURL);
+              } catch(e) {
+                console.log(e);
+              }
+            }
+          };
+        },
+        open() {
+          this.$.takePicture.click();
+          console.log('Opening');
+        }
+      });
+    })();
+  </script>
+</dom-module>
+

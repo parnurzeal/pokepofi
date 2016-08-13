@@ -1,0 +1,21 @@
+{
+  "name": "pokepofi",
+  "authors": [
+    "Theeraphol Wattanavekin"
+  ],
+  "private": true,
+  "dependencies": {
+    "iron-icons": "^1.1.3",
+    "polymer": "^1.6.1",
+    "paper-fab": "^1.2.0",
+    "platinum-sw": "^1.3.0",
+    "app-storage": "^0.9.4",
+    "paper-button": "^1.0.13",
+    "paper-icon-button": "^1.1.2",
+    "promise-polyfill": "^6.0.1",
+    "web-animations-js": "^2.2.2"
+  },
+  "devDependencies": {
+    "web-component-tester": "^4.0.0"
+  }
+}

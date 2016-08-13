@@ -1,0 +1,27 @@
+<link rel="import" href="/poke-app/elements.html">
+<link rel="import" href="bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror.html">
+<link rel="import" href="bower_components/iron-icons/image-icons.html">
+
+<dom-module id="poke-app">
+  <template>
+    <style include="shared-styles"></style>
+    <poke-toolbar></poke-toolbar>
+    <paper-fab
+    icon="image:photo-camera"
+    on-tap="create"
+    aria-label="Add note">
+    </paper-fab>
+    <poke-camera id="camera">
+    </poke-camera>
+  </template>
+  <script>
+    (() => {
+      Polymer({
+        is: 'poke-app',
+        behaviors: [
+          Polymer.PokeAppBehavior
+        ]
+      });
+    })();
+  </script>
+</dom-module>
