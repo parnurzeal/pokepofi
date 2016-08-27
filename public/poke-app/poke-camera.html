@@ -1,8 +1,30 @@
 <link rel="import" href="/bower_components/paper-styles/color.html">
 <link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="/bower_components/paper-button/paper-button.html">
+<link rel="import" href="/bower_components/paper-card/paper-card.html">
+
 <dom-module id="poke-camera">
   <template>
+    <style>
+      :host {
+        display: block;
+        margin: .5rem 0 1rem 0;
+        text-align: center;
+      }
+    </style>
+    <paper-card heading="Card Title" image="https://raw.githubusercontent.com/youpin-city/youpin-web/master/public/image/pin_photo_upload.png">
+    <div class="card-content">
+      <div id="pofi-title">Gastly</div>
+      <div id="pofi-hp">HP 16 / 16</div>
+      <div id="pofi-type">Ghost / Poison</div>
+      <div id="pofi-weight">0.09 kg</div>
+      <div id="pofi-heigh">1.18 m</div>
+
+    </div>
+      <div class="card-actions">
+        <paper-button>Share on Facebook</paper-button>
+      </div>
+    </paper-card>
     <img src="about:blank" alt="" id="showPicture">
     <input type="file" id="takePicture" accept="image/*" hidden>
   </template>
